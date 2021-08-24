@@ -24,7 +24,7 @@ GUID = '5483d786-d0d9-4eb8-a8c8-d9ac224695aa'
 Author = 'Avri Chen-Roth'
 
 # Company or vendor of this module
-CompanyName = 'Unknown'
+CompanyName = 'Avri Chen-Roth'
 
 # Copyright statement for this module
 Copyright = '(c) 2021 Avri Chen-Roth. All rights reserved.'
