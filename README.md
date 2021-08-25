@@ -29,7 +29,7 @@ Windows Application Driver (WinAppDriver) is a service to support Selenium-like 
     > **Note**: Elements are case sensitive!
 5. Once you find element and you save it to a variable you can invoke a mouse click 
    ```
-   $e = Get-WinAppElement -By Name -Value 'File
+   $e = Get-WinAppElement -By Name -Value 'File'
    Invoke-WinAppClick -Element $e
    ```
 6. We can also send keystrokes to a text element 
