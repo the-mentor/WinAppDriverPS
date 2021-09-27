@@ -3,7 +3,8 @@ Function New-WinAppSession {
     Param(
         [Parameter(Mandatory = $true)]$App,
         [string]$BaseURI = "http://127.0.0.1:4723",
-        [int]$AppLaunchTimeout = 0
+        [int]$AppLaunchTimeout = 0,
+        [switch]$StartWinAppDriver
     )
 
     $json = [PSCustomObject]@{
@@ -15,6 +16,11 @@ Function New-WinAppSession {
     } | ConvertTo-Json -Depth 99 -Compress
 
     $HubURI = "$BaseURI/wd/hub"
+
+    if ($StartWinAppDriver) {
+        Start-WinAppDriver
+    }
+
     $Session = Invoke-RestMethod -Method Post -Uri "$HubURI/session" -ContentType 'application/json' -Body $json -TimeoutSec $($AppLaunchTimeout + 10)
 
     $Script:WinAppSession = [PSCustomObject]@{
