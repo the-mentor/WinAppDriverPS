@@ -1,5 +1,3 @@
-
-
 Function Start-WinAppDriver {
     Param (
         $ExePath = "C:\Program Files (x86)\Windows Application Driver\WinAppDriver.exe",
